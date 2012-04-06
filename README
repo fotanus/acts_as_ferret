@@ -39,7 +39,7 @@ a line like that in my Capfiles, loading everything found below RAILS_ROOT/lib/r
 
 === Installation inside your Rails project via script/plugin
 
-script/plugin install git://github.com/jkraemer/acts_as_ferret.git
+script/plugin install git://github.com/fotanus/acts_as_ferret.git
 
 No additional setup needed.
 
