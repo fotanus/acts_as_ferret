@@ -33,6 +33,14 @@ module ActsAsFerret
         end
       end
 
+	  def config
+		  @config
+	  end
+
+	  def self.load
+		  self.new.config
+	  end
+
       ################################################################################
       # treat the keys of the config data as methods
       def method_missing (name, *args)
@@ -85,6 +93,10 @@ module ActsAsFerret
         raise "ferret_server not configured for #{RAILS_ENV}" unless (@cfg.uri rescue nil)
         platform_daemon { run_drb_service }
       end
+
+	  def self.start
+		  self.new.start
+	  end
 
       ################################################################################
       # run the server and block until it exits
